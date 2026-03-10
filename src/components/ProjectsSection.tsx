@@ -3,38 +3,53 @@ import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import projectPlaceholder from "@/assets/project-placeholder.jpg";
 
-// REPLACE: Edit these projects with your own project details
 const projects = [
   {
-    title: "AI-Powered Analytics Dashboard",
-    description: "Full-stack analytics platform with LLM-powered insights, real-time data visualization, and automated reporting workflows.",
-    tech: ["React", "Python", "FastAPI", "PostgreSQL", "OpenAI"],
+    title: "VigilWatch",
+    description: "A web-based uptime and incident monitoring platform that performs synthetic checks against configured endpoints, detects failures, records incidents, and visualizes system health in near real-time.",
+    tech: ["Python", "AWS Lambda", "DynamoDB", "API Gateway", "Terraform", "CloudWatch"],
     image: projectPlaceholder,
-    github: "https://github.com",  // REPLACE with your repo URL
-    demo: "https://example.com",   // REPLACE with your live demo URL
-  },
-  {
-    title: "Cloud Infrastructure Orchestrator",
-    description: "Automated cloud resource management tool supporting multi-cloud deployments with Terraform and CI/CD pipelines.",
-    tech: ["TypeScript", "AWS", "Terraform", "Docker", "Node.js"],
-    image: projectPlaceholder,
-    github: "https://github.com",
+    github: "https://github.com/lesego-rabotapi/VigilWatch",
     demo: "",
   },
   {
-    title: "Conversational AI Chatbot",
-    description: "Context-aware chatbot built with LangChain and vector databases for intelligent document Q&A capabilities.",
-    tech: ["Python", "LangChain", "Pinecone", "React", "FastAPI"],
+    title: "Bookie",
+    description: "A full-stack application project currently in development.",
+    tech: [],
     image: projectPlaceholder,
-    github: "https://github.com",
-    demo: "https://example.com",
+    github: "https://github.com/lesego-rabotapi/Bookie",
+    demo: "",
   },
   {
-    title: "Real-Time Collaboration Platform",
-    description: "WebSocket-powered collaborative workspace with live editing, presence indicators, and role-based access control.",
-    tech: ["Next.js", "Socket.io", "MongoDB", "Redis", "Tailwind"],
+    title: "Tasking",
+    description: "A collaborative task management app with add, edit, delete, and completion features. Built using Agile methodology with defined user stories and sprint planning.",
+    tech: ["JavaScript", "HTML", "CSS"],
     image: projectPlaceholder,
-    github: "https://github.com",
+    github: "https://github.com/lesego-rabotapi/tasking",
+    demo: "",
+  },
+  {
+    title: "Genie",
+    description: "A marketing content generator that helps create promotional materials and copy efficiently.",
+    tech: ["HTML"],
+    image: projectPlaceholder,
+    github: "https://github.com/lesego-rabotapi/genie",
+    demo: "",
+  },
+  {
+    title: "My Insights",
+    description: "A Python-based data insights and analytics tool for extracting meaningful patterns from datasets.",
+    tech: ["Python"],
+    image: projectPlaceholder,
+    github: "https://github.com/lesego-rabotapi/my-insights",
+    demo: "",
+  },
+  {
+    title: "Easy Gen",
+    description: "A Python-powered generation tool with Docker support for streamlined deployment and execution.",
+    tech: ["Python", "Docker"],
+    image: projectPlaceholder,
+    github: "https://github.com/lesego-rabotapi/easy-gen",
     demo: "",
   },
 ];
@@ -64,7 +79,6 @@ const ProjectsSection = () => {
               transition={{ delay: i * 0.1 }}
               className="group bg-card border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-all duration-500 hover:glow-gold"
             >
-              {/* REPLACE: swap the image src with your project screenshot */}
               <div className="h-44 overflow-hidden">
                 <img
                   src={project.image}
@@ -75,16 +89,18 @@ const ProjectsSection = () => {
               <div className="p-5">
                 <h3 className="font-heading text-lg text-parchment mb-2">{project.title}</h3>
                 <p className="text-sm text-steel leading-relaxed mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="text-xs font-heading tracking-wider px-2.5 py-1 bg-accent/50 text-primary rounded border border-primary/20"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                {project.tech.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="text-xs font-heading tracking-wider px-2.5 py-1 bg-accent/50 text-primary rounded border border-primary/20"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
                 <div className="flex gap-3">
                   <Button variant="outline" size="sm" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
