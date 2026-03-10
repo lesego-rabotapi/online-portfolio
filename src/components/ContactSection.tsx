@@ -20,7 +20,6 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      // REPLACE: Add your form submission logic here
       alert("Message sent! (Replace with actual submission logic)");
       setForm({ name: "", email: "", message: "" });
     }
@@ -40,7 +39,6 @@ const ContactSection = () => {
           <div className="divider-ornament w-24 mx-auto mb-12" />
         </motion.div>
 
-        {/* Social icons: GitHub, LinkedIn, Email */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -48,14 +46,13 @@ const ContactSection = () => {
           transition={{ delay: 0.2 }}
           className="flex justify-center gap-5 mb-10"
         >
-          {/* REPLACE: Update href values with your own profile URLs */}
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center border border-border rounded-md text-steel hover:text-primary hover:border-primary/40 transition-all duration-300">
+          <a href="https://github.com/lesego-rabotapi/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center border border-border rounded-md text-steel hover:text-primary hover:border-primary/40 transition-all duration-300">
             <Github className="w-5 h-5" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center border border-border rounded-md text-steel hover:text-primary hover:border-primary/40 transition-all duration-300">
+          <a href="https://www.linkedin.com/in/lesego-rabotapi-808173310/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 flex items-center justify-center border border-border rounded-md text-steel hover:text-primary hover:border-primary/40 transition-all duration-300">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="mailto:your@email.com" className="w-11 h-11 flex items-center justify-center border border-border rounded-md text-steel hover:text-primary hover:border-primary/40 transition-all duration-300">
+          <a href="mailto:rabotapilesego@gmail.com" className="w-11 h-11 flex items-center justify-center border border-border rounded-md text-steel hover:text-primary hover:border-primary/40 transition-all duration-300">
             <Mail className="w-5 h-5" />
           </a>
         </motion.div>
@@ -104,7 +101,6 @@ const ContactSection = () => {
         </motion.form>
       </div>
 
-      {/* Footer */}
       <div className="mt-20 text-center">
         <div className="divider-ornament w-32 mx-auto mb-6" />
         <p className="text-xs text-steel font-heading tracking-widest uppercase">

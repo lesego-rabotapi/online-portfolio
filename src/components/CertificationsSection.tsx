@@ -1,39 +1,70 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import certPlaceholder from "@/assets/cert-placeholder.jpg";
 
-// REPLACE: Add your own certifications here with real images and links
 const certifications = [
   {
-    title: "AWS Solutions Architect",
+    title: "Generative AI with Large Language Models",
+    issuer: "DeepLearning.AI & AWS",
+    image: "/cert-thumbs/generative-ai-llm.jpg",
+    pdfUrl: "/certs/generative-ai-llm.pdf",
+    verifyUrl: "https://coursera.org/verify/WHMIMR9143NY",
+  },
+  {
+    title: "DevOps on AWS: Code, Build, and Test",
     issuer: "Amazon Web Services",
-    image: certPlaceholder,  // REPLACE with your certificate image
-    verifyUrl: "https://aws.amazon.com/verification",
+    image: "/cert-thumbs/devops-aws.jpg",
+    pdfUrl: "/certs/devops-aws.pdf",
+    verifyUrl: "https://coursera.org/verify/3UHBXYPQQRDD",
   },
   {
-    title: "Azure AI Engineer",
-    issuer: "Microsoft",
-    image: certPlaceholder,
-    verifyUrl: "https://learn.microsoft.com/certifications",
+    title: "Git, Generative AI, and Prompt Engineering",
+    issuer: "Capaciti",
+    image: "/cert-thumbs/git-genai-prompt.jpg",
+    pdfUrl: "/certs/git-genai-prompt.pdf",
+    verifyUrl: "",
   },
   {
-    title: "Google Cloud Professional",
-    issuer: "Google",
-    image: certPlaceholder,
-    verifyUrl: "https://cloud.google.com/certification",
+    title: "Introduction to Generative AI",
+    issuer: "Google Cloud",
+    image: "/cert-thumbs/intro-genai.jpg",
+    pdfUrl: "/certs/intro-genai.pdf",
+    verifyUrl: "https://coursera.org/verify/PSNW5E5C89NH",
   },
   {
-    title: "TensorFlow Developer",
-    issuer: "Google",
-    image: certPlaceholder,
-    verifyUrl: "https://www.tensorflow.org/certificate",
+    title: "Version Control with Git",
+    issuer: "Atlassian",
+    image: "/cert-thumbs/version-control-git.jpg",
+    pdfUrl: "/certs/version-control-git.pdf",
+    verifyUrl: "https://coursera.org/verify/Q21J6WKJGK46",
   },
   {
-    title: "Kubernetes Administrator",
-    issuer: "CNCF",
-    image: certPlaceholder,
-    verifyUrl: "https://www.cncf.io/certification",
+    title: "A Tour of Google Cloud Hands-on Labs",
+    issuer: "Google Cloud",
+    image: "/cert-thumbs/google-cloud-tour.jpg",
+    pdfUrl: "/certs/google-cloud-tour.pdf",
+    verifyUrl: "https://coursera.org/verify/PP6K",
+  },
+  {
+    title: "Building Data Lakes on AWS",
+    issuer: "Amazon Web Services",
+    image: "/cert-thumbs/data-lakes-aws.jpg",
+    pdfUrl: "/certs/data-lakes-aws.pdf",
+    verifyUrl: "https://coursera.org/verify/WHIXB3H74GCD",
+  },
+  {
+    title: "Agile with Atlassian Jira",
+    issuer: "Atlassian",
+    image: "/cert-thumbs/agile-jira.jpg",
+    pdfUrl: "/certs/agile-jira.pdf",
+    verifyUrl: "https://coursera.org/verify/NGBJ8ECNZ",
+  },
+  {
+    title: "Cloud Architecture Design Patterns",
+    issuer: "Starweaver / Coursera",
+    image: "/cert-thumbs/cloud-architecture.jpg",
+    pdfUrl: "/certs/cloud-architecture.pdf",
+    verifyUrl: "https://coursera.org/verify/CYL47LXUXY2M",
   },
 ];
 
@@ -61,7 +92,6 @@ const CertificationsSection = () => {
           <div className="divider-ornament w-24 mx-auto mb-12" />
         </motion.div>
 
-        {/* Scroller */}
         <div className="relative">
           <button
             onClick={() => scroll("left")}
@@ -101,15 +131,17 @@ const CertificationsSection = () => {
                 <div className="p-4">
                   <h3 className="font-heading text-sm text-parchment mb-1">{cert.title}</h3>
                   <p className="text-xs text-steel">{cert.issuer}</p>
-                  <a
-                    href={cert.verifyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="text-xs text-primary hover:text-gold-light mt-2 inline-block font-heading tracking-wide"
-                  >
-                    Verify →
-                  </a>
+                  {cert.verifyUrl && (
+                    <a
+                      href={cert.verifyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-xs text-primary hover:text-gold-light mt-2 inline-block font-heading tracking-wide"
+                    >
+                      Verify →
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}

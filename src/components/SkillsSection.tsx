@@ -1,45 +1,22 @@
 import { motion } from "framer-motion";
 
-// REPLACE: Edit these skill categories and items to match your own skills
 const skillCategories = [
   {
     title: "Languages",
     skills: [
-      { name: "Python", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "JavaScript", level: 85 },
-      { name: "SQL", level: 80 },
-      { name: "Java", level: 70 },
-    ],
-  },
-  {
-    title: "Frameworks",
-    skills: [
-      { name: "React", level: 88 },
-      { name: "Next.js", level: 80 },
-      { name: "FastAPI", level: 82 },
-      { name: "Django", level: 75 },
-      { name: "Node.js", level: 78 },
+      { name: "Python", level: 70 },
+      { name: "JavaScript", level: 70 },
+      { name: "SQL", level: 60 },
     ],
   },
   {
     title: "Cloud & DevOps",
     skills: [
       { name: "AWS", level: 82 },
-      { name: "Azure", level: 75 },
-      { name: "Docker", level: 80 },
+      { name: "Azure", level: 70 },
+      { name: "Docker", level: 75 },
       { name: "CI/CD", level: 78 },
       { name: "Terraform", level: 70 },
-    ],
-  },
-  {
-    title: "Tools & Databases",
-    skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 78 },
-      { name: "Git", level: 90 },
-      { name: "Redis", level: 72 },
-      { name: "LangChain", level: 80 },
     ],
   },
 ];
