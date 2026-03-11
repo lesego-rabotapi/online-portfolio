@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Home, User, Code2, FolderOpen, Award, ScrollText, Mail } from "lucide-react";
+import { Home, User, Briefcase, Code2, FolderOpen, Award, ScrollText, Mail } from "lucide-react";
 
 const navItems = [
   { id: "hero", icon: Home, label: "Home" },
   { id: "about", icon: User, label: "About" },
+  { id: "experience", icon: Briefcase, label: "Exp" },
   { id: "skills", icon: Code2, label: "Skills" },
   { id: "projects", icon: FolderOpen, label: "Projects" },
   { id: "certifications", icon: ScrollText, label: "Certs" },

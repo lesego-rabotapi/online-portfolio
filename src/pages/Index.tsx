@@ -4,6 +4,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import SideNav from "@/components/SideNav";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
@@ -36,6 +37,7 @@ const Index = () => {
           <div className="pl-16 md:pl-20">
             <HeroSection />
             <AboutSection />
+            <ExperienceSection />
             <SkillsSection />
             <ProjectsSection />
             <CertificationsSection />
