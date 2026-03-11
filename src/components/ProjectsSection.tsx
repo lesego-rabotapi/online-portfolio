@@ -13,14 +13,6 @@ const projects = [
     demo: "",
   },
   {
-    title: "Bookie",
-    description: "A full-stack application project currently in development.",
-    tech: [],
-    image: projectPlaceholder,
-    github: "https://github.com/lesego-rabotapi/Bookie",
-    demo: "",
-  },
-  {
     title: "Tasking",
     description: "A collaborative task management app with add, edit, delete, and completion features. Built using Agile methodology with defined user stories and sprint planning.",
     tech: ["JavaScript", "HTML", "CSS"],
