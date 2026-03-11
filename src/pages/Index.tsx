@@ -37,6 +37,7 @@ const Index = () => {
           <div className="pl-16 md:pl-20">
             <HeroSection />
             <AboutSection />
+            <ExperienceSection />
             <SkillsSection />
             <ProjectsSection />
             <CertificationsSection />
