@@ -9,6 +9,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import ContactSection from "@/components/ContactSection";
+import EmberEffect from "@/components/EmberEffect";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
