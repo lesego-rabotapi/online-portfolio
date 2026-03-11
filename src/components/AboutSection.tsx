@@ -44,7 +44,8 @@ const AboutSection = () => {
           className="text-center mt-10"
         >
           <a
-            href="#"
+            href="/resume/Lesego_Rabotapi_CV.pdf"
+            download
             className="inline-flex items-center gap-2 font-heading text-sm tracking-widest uppercase text-primary hover:text-gold-light transition-colors border border-primary/30 px-6 py-3 rounded-md hover:border-primary/60"
           >
             Download CV

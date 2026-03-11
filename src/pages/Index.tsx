@@ -30,6 +30,7 @@ const Index = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
+          <EmberEffect />
           <SideNav />
           {/* Content offset for left sidebar */}
           <div className="pl-16 md:pl-20">

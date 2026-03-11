@@ -41,14 +41,13 @@ const HeroSection = () => {
           Software Developer
         </motion.p>
 
-        {/* REPLACE: Change the name below to your own */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.7 }}
           className="text-3xl md:text-5xl font-heading font-bold gradient-gold-text mb-4 leading-tight"
         >
-          Your Name
+          Lesego Rabotapi
         </motion.h1>
 
         <motion.p

@@ -1,12 +1,8 @@
 import { motion } from "framer-motion";
-import { Trophy, Star, Medal, Award } from "lucide-react";
+import { Award } from "lucide-react";
 
-// REPLACE: Edit these achievements with your own
 const achievements = [
-  { icon: Trophy, title: "Hackathon Winner", description: "1st Place — AI Innovation Challenge 2025" },
-  { icon: Star, title: "Open Source Contributor", description: "Top contributor to major ML framework" },
-  { icon: Medal, title: "Dean's List", description: "Consistent academic excellence throughout degree" },
-  { icon: Award, title: "Best Capstone Project", description: "Awarded for outstanding final year project" },
+  { icon: Award, title: "CAPACITI Leadership Certificate", description: "Recognised for leadership excellence during the CAPACITI Digital Engineering programme" },
 ];
 
 const AchievementsSection = () => {
@@ -24,7 +20,7 @@ const AchievementsSection = () => {
           <div className="divider-ornament w-24 mx-auto mb-12" />
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="max-w-lg mx-auto">
           {achievements.map((a, i) => (
             <motion.div
               key={a.title}

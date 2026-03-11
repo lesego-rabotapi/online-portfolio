@@ -18,13 +18,6 @@ const certifications = [
     verifyUrl: "https://coursera.org/verify/3UHBXYPQQRDD",
   },
   {
-    title: "Git, Generative AI, and Prompt Engineering",
-    issuer: "Capaciti",
-    image: "/cert-thumbs/git-genai-prompt.jpg",
-    pdfUrl: "/certs/git-genai-prompt.pdf",
-    verifyUrl: "",
-  },
-  {
     title: "Introduction to Generative AI",
     issuer: "Google Cloud",
     image: "/cert-thumbs/intro-genai.jpg",
