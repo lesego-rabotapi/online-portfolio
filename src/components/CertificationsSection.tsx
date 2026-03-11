@@ -4,6 +4,13 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const certifications = [
   {
+    title: "Full Stack Development",
+    issuer: "FNB App Academy",
+    image: "/cert-thumbs/full-stack-certificate.jpg",
+    pdfUrl: "/certs/full-stack-certificate.pdf",
+    verifyUrl: "",
+  },
+  {
     title: "Generative AI with Large Language Models",
     issuer: "DeepLearning.AI & AWS",
     image: "/cert-thumbs/generative-ai-llm.jpg",
