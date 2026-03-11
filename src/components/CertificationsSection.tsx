@@ -11,6 +11,13 @@ const certifications = [
     verifyUrl: "",
   },
   {
+    title: "Cloud Computing Basics (Cloud 101)",
+    issuer: "LearnQuest",
+    image: "/cert-thumbs/cloud-computing-basics.jpg",
+    pdfUrl: "/certs/cloud-computing-basics.pdf",
+    verifyUrl: "https://coursera.org/verify/U2Y38KF0US45",
+  },
+  {
     title: "Generative AI with Large Language Models",
     issuer: "DeepLearning.AI & AWS",
     image: "/cert-thumbs/generative-ai-llm.jpg",
