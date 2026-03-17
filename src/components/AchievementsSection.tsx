@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const achievements = [
   { icon: Award, title: "CAPACITI Leadership Certificate", description: "Recognised for leadership excellence during the CAPACITI Digital Engineering programme" },
@@ -14,8 +15,10 @@ const AchievementsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text mb-2 text-center">
-            Achievements
+          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-center">
+            <TextShimmer as="span" className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text">
+              Achievements
+            </TextShimmer>
           </h2>
           <div className="divider-ornament w-24 mx-auto mb-12" />
         </motion.div>

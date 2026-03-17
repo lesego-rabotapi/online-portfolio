@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const certifications = [
   {
@@ -86,20 +87,22 @@ const CertificationsSection = () => {
   };
 
   return (
-    <section id="certifications" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+    <section id="certifications" className="min-h-screen flex items-center justify-center py-24 px-6">
+      <div className="max-w-5xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text mb-2 text-center">
-            Certifications
+          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-center">
+            <TextShimmer as="span" className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text">
+              Certifications
+            </TextShimmer>
           </h2>
           <div className="divider-ornament w-24 mx-auto mb-12" />
         </motion.div>
 
-        <div className="relative">
+        <div className="relative px-12">
           <button
             onClick={() => scroll("left")}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-card/90 border border-border rounded-full text-steel hover:text-primary transition-colors"
@@ -115,7 +118,7 @@ const CertificationsSection = () => {
 
           <div
             ref={scrollRef}
-            className="flex gap-5 overflow-x-auto scrollbar-hide px-12 pb-4 snap-x snap-mandatory"
+            className="flex gap-5 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {certifications.map((cert, i) => (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const experience = [
   {
@@ -86,15 +87,17 @@ const TimelineItem = ({
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 px-6">
-      <div className="max-w-3xl mx-auto">
+    <section id="experience" className="min-h-screen flex flex-col items-center justify-center py-24 px-6">
+      <div className="max-w-3xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text mb-2 text-center">
-            Experience & Education
+          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-center">
+            <TextShimmer as="span" className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text">
+              Experience & Education
+            </TextShimmer>
           </h2>
           <div className="divider-ornament w-24 mx-auto mb-12" />
         </motion.div>

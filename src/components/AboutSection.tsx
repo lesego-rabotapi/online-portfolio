@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="min-h-screen flex items-center justify-center py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -10,8 +11,10 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text mb-2 text-center">
-            About Me
+          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-center">
+            <TextShimmer as="span" className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text">
+              About Me
+            </TextShimmer>
           </h2>
           <div className="divider-ornament w-24 mx-auto mb-10" />
         </motion.div>
@@ -48,7 +51,7 @@ const AboutSection = () => {
             download
             className="inline-flex items-center gap-2 font-heading text-sm tracking-widest uppercase text-primary hover:text-gold-light transition-colors border border-primary/30 px-6 py-3 rounded-md hover:border-primary/60"
           >
-            Download CV
+            Download Resume
           </a>
         </motion.div>
       </div>

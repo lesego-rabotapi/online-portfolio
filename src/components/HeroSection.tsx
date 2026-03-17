@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 import profileImg from "@/assets/profile.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -17,18 +18,18 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-        {/* Small profile image */}
+        {/* Profile image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mb-6"
+          className="mb-8"
         >
           {/* REPLACE: swap src with your own profile image */}
           <img
             src={profileImg}
             alt="Profile"
-            className="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-2 border-primary/40 object-cover"
+            className="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto border-2 border-primary/40 object-cover"
           />
         </motion.div>
 
@@ -45,16 +46,18 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.7 }}
-          className="text-3xl md:text-5xl font-heading font-bold gradient-gold-text mb-4 leading-tight"
+          className="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight"
         >
-          Lesego Rabotapi
+          <TextShimmer as="span" className="text-5xl md:text-7xl font-heading font-bold gradient-gold-text">
+            Lesego Rabotapi
+          </TextShimmer>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="text-base md:text-lg text-parchment/80 max-w-xl mx-auto mb-8 leading-relaxed"
+          className="text-lg md:text-2xl text-parchment/80 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Crafting intelligent solutions through AI integration, cloud architecture, and data-driven development.
         </motion.p>

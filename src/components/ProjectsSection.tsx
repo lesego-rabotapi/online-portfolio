@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 import projectPlaceholder from "@/assets/project-placeholder.jpg";
 
 const projects = [
@@ -48,15 +49,17 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="min-h-screen flex items-center justify-center py-24 px-6">
+      <div className="max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text mb-2 text-center">
-            Projects
+          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-center">
+            <TextShimmer as="span" className="text-2xl md:text-3xl font-heading font-bold gradient-gold-text">
+              Projects
+            </TextShimmer>
           </h2>
           <div className="divider-ornament w-24 mx-auto mb-12" />
         </motion.div>
