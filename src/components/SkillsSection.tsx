@@ -1,5 +1,16 @@
 import { motion } from "framer-motion";
 import { TextShimmer } from "@/components/ui/text-shimmer";
+
+import { 
+  SiPython, 
+  SiJavascript, 
+  SiReact, 
+  SiTypescript,
+  SiAmazon,
+  SiDocker,
+  SiKubernetes,
+} from "react-icons/si";
+
 import { 
   Python, 
   Code2, 
