@@ -9,6 +9,9 @@ import {
   SiAmazon,
   SiDocker,
   SiKubernetes,
+  SiTerraform,
+  SiGooglecloud,
+  SiMicrosoftAzure,
 } from "react-icons/si";
 
 import { 
