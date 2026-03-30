@@ -15,7 +15,6 @@ import {
 } from "react-icons/si";
 
 import { 
-  Python, 
   Code2, 
   Database, 
   Cloud, 
@@ -26,7 +25,7 @@ import {
 } from "lucide-react";
 
 const skills = [
-  { name: "Python", icon: Python },
+  { name: "Python", icon: SiPython },
   { name: "JavaScript", icon: Code2 },
   { name: "SQL", icon: Database },
   { name: "AWS", icon: Cloud },
